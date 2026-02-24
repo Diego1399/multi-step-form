@@ -245,3 +245,128 @@ ul, ol {
 .btn-next:hover {
     background-color: var(--clr-border-active);
 }
+
+.plan-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-md); 
+}
+
+.plan-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    padding: var(--space-md);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.plan-card:hover {
+    border-color: var(--clr-border-active);
+    background-color: var(--clr-neutral-blue-50);
+}
+
+.plan-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.plan-card img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.plan-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.plan-name {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text-primary);
+}
+
+.plan-price {
+    font-size: var(--fs-base);
+    color: var(--clr-text-secondary);
+}
+
+.plan-card:has(input[type="radio"]:checked) {
+    border-color: var(--clr-border-active);
+    background-color: var(--clr-neutral-blue-50);
+}
+
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-md );
+    margin-bottom: var(--space-lg);
+}
+
+.billing-label {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text-secondary);
+}
+
+.billing-label.active {
+    color: var(--clr-text-primary);
+}
+
+.btn-toggle {
+    width: 40px;
+    height: 20px;
+    background-color: var(--clr-border);
+    border-radius: var(--radius-lg);
+    padding: 0;
+    position: relative;
+    transition: background-color var(--transition-base);
+}
+
+.toggle-thumb {
+    width: 14px;
+    height: 14px;
+    background-color: var(--clr-neutral-white);
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: transform var(--transition-base);
+    pointer-events: none;
+}
+
+.billing-toggle.is-yearly .toggle-thumb {
+    transform: translateX(18px);
+}
+
+.billing-toggle.is-yearly #label-yearly {
+    background-color: var(--clr-primary-purple-600);
+}   
+
+.billing-toggle.is-yearly #label-monthly {
+    color: var(--clr-text-secondary);
+}
+
+.btn-go-back{
+    color: var(--clr-text-secondary);
+    font-weight: var(--fw-medium);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast);  
+    margin-right: auto;
+}
+
+.btn-go-back:hover {
+    background-color: var(--clr-neutral-purple-200);
+}
