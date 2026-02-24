@@ -143,7 +143,7 @@
       </div>
 
       <!-- Step 3 start -->
-      <div class="step-content" id="step-3">
+      <div class="step-content" id="step-3" style="display: none;">
         <h1 class="step-title" id="step-3-title">Pick add-ons</h1>
         <p class="step-description">Add-ons help enhance your gaming experience.</p>
         <form class="step-form" id="step-3-form" action="">
@@ -182,7 +182,7 @@
                   <span class="addons-description">Custom theme on your profile</span>
                 </div>
                 <span class="addons-price">+$2/mo</span>
-              </div>  
+              </div>
             </label>
           </div>
           <div class="step-footer">
@@ -196,13 +196,43 @@
       <!-- Step 3 end -->
 
       <!-- Step 4 start -->
-      <div class="step-content" id="step-4" style="display: none;">
+      <div class="step-content" id="step-4">
         <h1 class="step-title" id="step-4-title">Finishing up</h1>
         <p class="step-description">Double-check everything looks OK before confirming.</p>
-        Total (per month/year)
+        <!-- Dynamically add selected plan and add-ons here -->
+        <div class="summary-cards">
 
-        Go Back
-        Confirm
+          <label class="summary-card" for="selected-plan">
+            <div class="summary-left">
+              <div class="summary-info">
+                <span class="summary-name">Arcade (Monthly)</span>
+                <span class="summary-price">$9/mo</span>
+              </div>
+              <a href="#" class="change-link">Change</a>
+            </div>
+          </label>
+
+          <label class="summary-addons-card" for="selected-addons">
+            <div class="summary-left">
+              <div class="summary-addons-info">
+                <span class="summary-addons-name">Online service</span>
+                <span class="summary-addons-price">+$1/mo</span>
+              </div>
+            </div>
+          </label>
+
+
+        </div>
+
+        <div class="total-card">
+          <span class="total-label">Total (per month)</span>
+          <span class="total-price">$12/mo</span>
+        </div>
+
+        <div class="step-footer">
+          <button type="button" class="btn-go-back">Go Back</button>
+          <button type="button" class="btn-next">Confirm</button>
+        </div>
       </div>
 
       <!-- Dynamically add subscription and add-on selections here -->
