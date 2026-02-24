@@ -544,3 +544,18 @@ ul, ol {
     font-weight: var(--fw-bold);
     color: var(--clr-primary-purple-600);
 }
+
+#step-5 {
+    align-content: center;
+    text-align: center;
+}
+
+#step-5 .step-title {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text-primary);
+}
+
+#step-5 .step-description {
+    line-height: 1.6;
+}
