@@ -90,22 +90,22 @@
       <!-- Step 1 end -->
 
       <!-- Step 2 start -->
-      <div class="step-content" id="step-2">
+      <div class="step-content" id="step-2" style="display: none;">
         <h1 class="step-title" id="step-2-title">Select your plan</h1>
         <p class="step-description">You have the option of monthly or yearly billing.</p>
 
         <form class="step-form" id="step-2-form" action="">
           <div class="plan-cards">
             <label class="plan-card" for="arcade">
-              <input type="radio" id="arcade" name="plan" value="arcade" checked/>
+              <input type="radio" id="arcade" name="plan" value="arcade" checked />
               <img src="./assets/images/icon-arcade.svg" alt="Arcade Icon">
               <div class="plan-info">
                 <span class="plan-name">Arcade</span>
-                <span class="plan-price">$9/mo</span>     
+                <span class="plan-price">$9/mo</span>
               </div>
-            </label>  
+            </label>
             <label class="plan-card" for="advanced">
-              <input type="radio" id="advanced" name="plan" value="advanced"/>
+              <input type="radio" id="advanced" name="plan" value="advanced" />
               <img src="./assets/images/icon-advanced.svg" alt="Advanced Icon">
               <div class="plan-info">
                 <span class="plan-name">Advanced</span>
@@ -113,19 +113,19 @@
               </div>
             </label>
             <label class="plan-card" for="pro">
-              <input type="radio" id="pro" name="plan" value="pro"/>
+              <input type="radio" id="pro" name="plan" value="pro" />
               <img src="./assets/images/icon-pro.svg" alt="Pro Icon">
               <div class="plan-info">
                 <span class="plan-name">Pro</span>
                 <span class="plan-price">$15/mo</span>
               </div>
-            </label>  
+            </label>
           </div>
 
           <div class="billing-toggle">
             <span class="billing-label active" id="label-monthly">Monthly</span>
             <button type="button" class="btn-toggle" role="switch" aria-checked="false"
-            aria-labelledby="label-monthly label-yearly">
+              aria-labelledby="label-monthly label-yearly">
               <span class="toggle-thumb"></span>
             </button>
             <span class="billing-label" id="label-yearly">Yearly</span>
@@ -140,60 +140,87 @@
         </form>
 
         <!-- Step 2 end -->
-
-        <!-- Step 3 start -->
-        <div class="step-content" id="step-3" style="display: none;">
-          <h1 class="step-title" id="step-3-title">Pick add-ons</h1>
-          <p class="step-description">Add-ons help enhance your gaming experience.</p>
-          Pick add-ons
-          Add-ons help enhance your gaming experience.
-
-          Online service
-          Access to multiplayer games
-          +$1/mo
-
-          Larger storage
-          Extra 1TB of cloud save
-          +$2/mo
-
-          Customizable Profile
-          Custom theme on your profile
-          +$2/mo
-
-          Go Back
-          Next Step
-        </div>
-
-        <!-- Step 3 end -->
-
-        <!-- Step 4 start -->
-        <div class="step-content" id="step-4" style="display: none;">
-          <h1 class="step-title" id="step-4-title">Finishing up</h1>
-          <p class="step-description">Double-check everything looks OK before confirming.</p>
-          Total (per month/year)
-
-          Go Back
-          Confirm
-        </div>
-
-        <!-- Dynamically add subscription and add-on selections here -->
-
-
-
-        <!-- Step 4 end -->
-
-        <!-- Step 5 start -->
-        <div class="step-content" id="step-5" style="display: none;">
-          <h1 class="step-title" id="step-5-title">Thank you!</h1>
-          <p class="step-description">
-            Thanks for confirming your subscription! We hope you have fun
-            using our platform. If you ever need support, please feel free
-            to email us at support@loremgaming.com.
-          </p>
-        </div>
-        <!-- Step 5 end -->
       </div>
 
+      <!-- Step 3 start -->
+      <div class="step-content" id="step-3">
+        <h1 class="step-title" id="step-3-title">Pick add-ons</h1>
+        <p class="step-description">Add-ons help enhance your gaming experience.</p>
+        <form class="step-form" id="step-3-form" action="">
+          <div class="addons-cards">
+            <label class="addons-card" for="online-service">
+              <input type="checkbox" id="online-service" name="add-on" value="online-service" />
+              <div class="addons-left">
+                <span class="addons-checkmark" aria-hidden="true"></span>
+                <div class="addons-info">
+                  <span class="addons-name">Online service</span>
+                  <span class="addons-description">Access to multiplayer games</span>
+                </div>
+                <span class="addons-price">+$1/mo</span>
+              </div>
+
+
+            </label>
+            <label class="addons-card" for="larger-storage">
+              <input type="checkbox" id="larger-storage" name="add-on" value="larger-storage" />
+              <div class="addons-left">
+                <span class="addons-checkmark" aria-hidden="true"></span>
+                <div class="addons-info">
+                  <span class="addons-name">Larger storage</span>
+                  <span class="addons-description">Extra 1TB of cloud save</span>
+                </div>
+                <span class="addons-price">+$2/mo</span>
+              </div>
+
+            </label>
+            <label class="addons-card" for="customizable-profile">
+              <input type="checkbox" id="customizable-profile" name="add-on" value="customizable-profile" />
+              <div class="addons-left">
+                <span class="addons-checkmark" aria-hidden="true"></span>
+                <div class="addons-info">
+                  <span class="addons-name">Customizable profile</span>
+                  <span class="addons-description">Custom theme on your profile</span>
+                </div>
+                <span class="addons-price">+$2/mo</span>
+              </div>  
+            </label>
+          </div>
+          <div class="step-footer">
+            <button type="button" class="btn-go-back">Go Back</button>
+            <button type="button" class="btn-next">Next Step</button>
+          </div>
+        </form>
+
+      </div>
+
+      <!-- Step 3 end -->
+
+      <!-- Step 4 start -->
+      <div class="step-content" id="step-4" style="display: none;">
+        <h1 class="step-title" id="step-4-title">Finishing up</h1>
+        <p class="step-description">Double-check everything looks OK before confirming.</p>
+        Total (per month/year)
+
+        Go Back
+        Confirm
+      </div>
+
+      <!-- Dynamically add subscription and add-on selections here -->
+
+
+
+      <!-- Step 4 end -->
+
+      <!-- Step 5 start -->
+      <div class="step-content" id="step-5" style="display: none;">
+        <h1 class="step-title" id="step-5-title">Thank you!</h1>
+        <p class="step-description">
+          Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.
+        </p>
+      </div>
+      <!-- Step 5 end -->
     </div>
   </div>
 

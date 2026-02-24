@@ -246,14 +246,14 @@ ul, ol {
     background-color: var(--clr-border-active);
 }
 
-.plan-cards {
+.plan-cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
     margin-bottom: var(--space-md); 
 }
 
-.plan-card {
+.plan-card{
     display: flex;
     flex-direction: column;
     gap: var(--space-xl);
@@ -264,12 +264,12 @@ ul, ol {
     transition: border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
-.plan-card:hover {
+.plan-card:hover, .addons-card:hover {
     border-color: var(--clr-border-active);
     background-color: var(--clr-neutral-blue-50);
 }
 
-.plan-card input[type="radio"] {
+.plan-card input[type="radio"], .addons-card input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     width: 0;
@@ -283,24 +283,24 @@ ul, ol {
     flex-shrink: 0;
 }
 
-.plan-info {
+.plan-info, .addons-info {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.plan-name {
+.plan-name, .addons-name {
     font-size: var(--fs-md);
     font-weight: var(--fw-bold);
     color: var(--clr-text-primary);
 }
 
-.plan-price {
+.plan-price, .addons-description {
     font-size: var(--fs-base);
     color: var(--clr-text-secondary);
 }
 
-.plan-card:has(input[type="radio"]:checked) {
+.plan-card:has(input[type="radio"]:checked), .addons-card:has(input[type="checkbox"]:checked) {
     border-color: var(--clr-border-active);
     background-color: var(--clr-neutral-blue-50);
 }
@@ -369,4 +369,80 @@ ul, ol {
 
 .btn-go-back:hover {
     background-color: var(--clr-neutral-purple-200);
+}
+
+.addons-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.addons-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: border-color var(--transition-fast),
+              background-color var(--transition-fast);
+}
+
+.addons-card:hover {
+  border-color: var(--clr-border-active);
+  background-color: var(--clr-neutral-blue-50);
+}
+
+.addons-price {
+    font-size: var(--fs-base);
+    color: var(--clr-primary-purple-600);
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.addons-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex: 1;
+}
+
+.addons-checkmark {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast),
+              border-color var(--transition-fast);
+  position: relative;
+}
+
+.addons-checkmark::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 6px;
+  height: 11px;
+  border: 2px solid var(--clr-white);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.addons-card:has(input:checked) .addons-checkmark {
+  background-color: var(--clr-border-active);
+  background-image: url('../assets/images/icon-checkmark.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: var(--clr-border-active);
+}
+
+.addons-card:has(input:checked) .addons-checkmark::after {
+  opacity: 1;
 }
