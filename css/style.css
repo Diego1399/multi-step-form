@@ -333,7 +333,7 @@ ul, ol {
 .btn-toggle {
     width: 40px;
     height: 20px;
-    background-color: var(--clr-border);
+    background-color: var(--clr-primary-blue-950);
     border-radius: var(--radius-lg);
     padding: 0;
     position: relative;
@@ -357,7 +357,7 @@ ul, ol {
 }
 
 .billing-toggle.is-yearly #label-yearly {
-    background-color: var(--clr-primary-purple-600);
+    color: var(--clr-text-primary)  ;
 }   
 
 .billing-toggle.is-yearly #label-monthly {
