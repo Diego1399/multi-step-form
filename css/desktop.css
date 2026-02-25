@@ -1,0 +1,171 @@
+/* ============================================
+   DESKTOP - 1440px
+   Sin media query - el <link media=""> lo maneja
+   ============================================ */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.app-wrapper {
+    flex-direction: row;
+    width: min(940px, 100%);
+    min-height: 600px;
+    background-color: var(--clr-neutral-white);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 25px 40px -20px hsla(229, 23%, 23%, 0.2);
+    overflow: hidden;
+    padding: var(--space-md);
+}
+
+/* Sidebar vertical */
+.sidebar {
+    background-image: url('../assets/images/bg-sidebar-desktop.svg');
+    width: 274px;
+    min-height: unset;
+    border-radius: var(--radius-md);
+    padding: var(--space-2xl) var(--space-xl);
+    flex-shrink: 0;
+}
+
+.steps-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--space-lg);
+}
+
+.step-item { gap: var(--space-md); }
+
+/* Labels visibles en desktop */
+.step-label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.step-tag {
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+    color: var(--clr-primary-blue-300);
+    letter-spacing: 1px;
+}
+
+.step-tag-title {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.content {
+    flex: 1;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: var(--space-2xl) var(--space-2xl) var(--space-xl);
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.step-content { max-width: 450px; }
+
+.step-content h1 { font-size: var(--fs-xl); }
+
+.step-content .step-description {
+    margin-bottom: var(--space-2xl);
+    font-size: var(--fs-md);
+}
+
+.step-form { padding-bottom: 0; }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-lg);
+}
+
+.form-group label {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-medium);
+    color: var(--clr-text-primary);
+}
+
+/* Footer estático en desktop */
+.step-footer {
+    position: static;
+    box-shadow: none;
+    padding: 0;
+    margin-top: var(--space-xl);
+    width: 100%;
+}
+
+/* Plan cards - grid 3 columnas */
+.list-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.box-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xl);
+    padding: var(--space-md);
+}
+
+.plan-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+/* Add-ons y summary - columna */
+#step-3 .list-cards,
+#step-4 .list-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+#step-3 .box-card {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+#step-4 .list-cards {
+    gap: 0;
+    margin-bottom: 0;
+}
+
+#step-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-2xl) 0;
+    gap: var(--space-md);
+}
+
+#step-5 img {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--space-md);
+}
+
+#step-5 .step-title {
+    font-size: var(--fs-xl);
+}
+
+#step-5 .step-description { margin-bottom: 0; }
+
+.attribution { padding: var(--space-md); }
