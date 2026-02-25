@@ -233,7 +233,7 @@ ul, ol {
     gap: var(--space-md);
 }
 
-.btn-next{
+.btn-next, .btn-confirm{
     background-color: var(--clr-primary-blue-950);
     color: var(--clr-neutral-white);
     font-weight: var(--fw-medium);
@@ -242,34 +242,33 @@ ul, ol {
     transition: background-color var(--transition-fast);  
 }
 
-.btn-next:hover {
+.btn-next:hover, .btn-confirm:hover{
     background-color: var(--clr-border-active);
 }
 
-.plan-cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
-    margin-bottom: var(--space-md); 
-}
-
-.plan-card{
+.list-cards{
     display: flex;
     flex-direction: column;
-    gap: var(--space-xl);
-    padding: var(--space-md);
+    gap: var(--space-md);
+}
+
+.box-card{
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
     border: 1px solid var(--clr-border);
     border-radius: var(--radius-lg);
     cursor: pointer;
-    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    transition: border-color var(--transition-fast), 
+                background-color var(--transition-fast);
 }
 
-.plan-card:hover, .addons-card:hover {
+.box-card:hover {
     border-color: var(--clr-border-active);
     background-color: var(--clr-neutral-blue-50);
 }
 
-.plan-card input[type="radio"], .addons-card input[type="checkbox"] {
+.box-card input[type="radio"], .box-card input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     width: 0;
@@ -277,10 +276,17 @@ ul, ol {
     pointer-events: none;
 }
 
-.plan-card img {
+.box-card img {
     width: 40px;
     height: 40px;
     flex-shrink: 0;
+}
+
+.plan-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex: 1;
 }
 
 .plan-info, .addons-info {
@@ -289,7 +295,7 @@ ul, ol {
     gap: 4px;
 }
 
-.plan-name, .addons-name {
+.card-name{
     font-size: var(--fs-md);
     font-weight: var(--fw-bold);
     color: var(--clr-text-primary);
@@ -300,7 +306,7 @@ ul, ol {
     color: var(--clr-text-secondary);
 }
 
-.plan-card:has(input[type="radio"]:checked), .addons-card:has(input[type="checkbox"]:checked) {
+.box-card:has(input[type="radio"]:checked), .box-card:has(input[type="checkbox"]:checked) {
     border-color: var(--clr-border-active);
     background-color: var(--clr-neutral-blue-50);
 }
@@ -371,30 +377,6 @@ ul, ol {
     background-color: var(--clr-neutral-purple-200);
 }
 
-.addons-cards {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.addons-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-md);
-  padding: var(--space-md) var(--space-lg);
-  border: 1px solid var(--clr-border);
-  border-radius: var(--radius-lg);
-  cursor: pointer;
-  transition: border-color var(--transition-fast),
-              background-color var(--transition-fast);
-}
-
-.addons-card:hover {
-  border-color: var(--clr-border-active);
-  background-color: var(--clr-neutral-blue-50);
-}
-
 .addons-price {
     font-size: var(--fs-base);
     color: var(--clr-primary-purple-600);
@@ -435,7 +417,7 @@ ul, ol {
   transition: opacity var(--transition-fast);
 }
 
-.addons-card:has(input:checked) .addons-checkmark {
+.box-card:has(input:checked) .addons-checkmark {
   background-color: var(--clr-border-active);
   background-image: url('../assets/images/icon-checkmark.svg');
   background-repeat: no-repeat;
@@ -443,13 +425,8 @@ ul, ol {
   border-color: var(--clr-border-active);
 }
 
-.addons-card:has(input:checked) .addons-checkmark::after {
+.box-card:has(input:checked) .addons-checkmark::after {
   opacity: 1;
-}
-
-.summary-cards {
-    display: flex;
-    flex-direction: column;
 }
 
 .summary-card {
